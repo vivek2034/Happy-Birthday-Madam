@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wine Glass</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffe6f2;
+    }
+
+    .wine-glass-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    /* Glass body */
+    .glass {
+      position: relative;
+      width: 120px;
+      height: 180px;
+      background: transparent;
+      border: 4px solid #c7c1c1;
+      border-radius: 10% 10% 60% 60% / 20% 20% 50% 50%;
+      clip-path: ellipse(100% 100% at 50% 105%);
+      overflow: hidden;
+      margin-bottom: 0px; /* To overlap the stem */
+    }
+
+    /* Wine fill */
+    .wine {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(to top, #8b0000, #b22222);
+      transition: height 2s ease-in-out;
+    }
+
+    /* Stem */
+    .stem {
+      width: 10px;
+      height: 120px;
+      background: #c7c1c1;
+      margin-top: 0; /* Removed gap between glass and stem */
+    }
+
+    /* Base */
+    .base {
+      width: 60px;
+      height: 15px;
+      background: #c7c1c1;
+      border-radius: 50%;
+      margin-top: -10px; /* Overlap slightly to connect with the stem */
+    }
+
+    
+    /* Fill Button */
+    .fill-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #ff99cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .fill-button:hover {
+      background-color: #ffe6f2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Wine Glass -->
+  <div class="wine-glass-container">
+    <h1>Wine🍷</h1>
+     <p>Not Real But For Now</p>
+    <div class="glass">
+      <div class="wine" id="wine"></div>
+    </div>
+    <div class="stem"></div>
+    <div class="base"></div>
+<button class="fill-button" onclick="fillWine()">Fill the Glass🍷</button>
+    
+  </div>
+
+
+  <!-- Button to fill the glass -->
+    <a href="happiness-check.html" class="fill-button" style="text-decoration: none">Don't Touch Me😅</a>
+    <a href="apology.html" class="fill-button" style="text-decoration: none">Ye Dekho❤❤</a>
+  <script>
+    function fillWine() {
+      const wine = document.getElementById("wine");
+      wine.style.height = "75%";
+    }
+  </script>
+
+</body>
+</html>

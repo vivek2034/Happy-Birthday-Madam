@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6f2;
+  }
+  
+  .container, .note-container {
+    padding: 20px;
+    margin: 10% auto;
+    width: 80%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #ff99cc;
+  }
+  h2 {
+    font-size: 2rem;
+    color: #ff99cc;
+  }
+
+
+  
+  .typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #ff99cc; /* Cursor */
+    animation: typing 5s steps(40, end) 1, blink 0.5s step-end infinite;
+    font-size: 24px;
+  }
+
+  .note p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #F7879A;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.5rem 2rem;
+    background-color:#ff99cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .btn:hover {
+    background-color: #ffe6f2;
+  }
+  
+  .slideshow-container {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #F7879A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    display: inline-block;
+    background-color:pink;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color:#F7879A;
+}
+
+.eyes{
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #F7879A;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
